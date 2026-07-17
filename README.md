@@ -82,3 +82,4 @@ GitHub repository and connect that repo in Netlify instead.
   directly from `esm.sh` — no bundler needed for the pages themselves.
 - The Netlify Function is the only part of this project that needs `npm install`,
   which is why a Git-connected deploy matters (see step 5 above).
+# seniorsos
