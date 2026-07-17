@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pricing — SeniorsOS</title>
-<meta name="description" content="Try Scam Shield free, forever. Unlock the Full Toolkit for a one-time fee, or get it set up for you.">
+<meta name="description" content="Every SeniorsOS module is free to use right now, no account needed. Want it set up for you instead?">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.ico">
@@ -22,11 +22,11 @@
       <a href="about.html">About</a>
     </nav>
       <div class="auth-controls mono">
-        <a href="#" data-auth-open="login" class="auth-out">Log in</a>
+        <a href="donate.html" class="auth-out">Become a supporter</a>
         <a href="member-dashboard.html" class="auth-member" style="display:none;">My Toolkit</a>
         <a href="#" data-auth-action="logout" class="auth-in" style="display:none;">Log out</a>
       </div>
-    <button class="header-cta" onclick="location.href='toolkit.html'">Try Scam Shield free</button>
+    <button class="header-cta" onclick="location.href='toolkit.html'">Useful Scam Shield</button>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
   </div>
 </header>
@@ -35,8 +35,8 @@
 
   <section class="page-hero">
     <span class="eyebrow mono">Pricing</span>
-    <h1>Try it free. Pay only if it's genuinely useful.</h1>
-    <p class="lede">No subscriptions you forget about, no surprise renewals. One free module, one straightforward upgrade, and a helping hand if you'd rather not do the setup yourself.</p>
+    <h1>Everything's free right now.</h1>
+    <p class="lede">No subscriptions, no card, no account. Every module is free to use while SeniorsOS grows — and a helping hand is available if you'd rather not do the setup yourself.</p>
   </section>
 
   <section style="padding-top:0;">
@@ -54,18 +54,19 @@
       </div>
 
       <div class="price-card highlight">
-        <span class="mono">One-time payment</span>
+        <span class="mono">Free while we grow</span>
         <h3>Full Toolkit</h3>
-        <div class="amount">$5.99</div>
+        <div class="amount">$0</div>
         <ul>
           <li>All six modules: Bill Buster, Tradie Finder, Letter Writer, Getting Around, Car Basics, Scam Shield</li>
           <li>Printable versions of every guide</li>
           <li>The SeniorsOS Notion dashboard</li>
-          <li>Pay once — no recurring charge</li>
+          <li>No account or card needed — usually $5.99, free for now</li>
         </ul>
-        <!-- The Stripe Payment Link lives in assets/auth.js (STRIPE_PAYMENT_LINK constant) —
-             edit it there once and every checkout button on the site uses it. -->
-        <a class="btn-primary" href="#" data-auth-checkout="1">Get the Full Toolkit</a>
+        <!-- Paywall temporarily disabled (see _redirects). The Stripe Payment
+             Link + data-auth-checkout wiring is left in place in assets/auth.js
+             so charging can be switched back on later without rebuilding this. -->
+        <a class="btn-primary" href="toolkit.html">Use the Full Toolkit</a>
       </div>
 
       <div class="price-card">

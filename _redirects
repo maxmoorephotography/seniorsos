@@ -6,6 +6,12 @@
 # the page as normal. Everyone else (including logged-out visitors) is sent to
 # pricing.html instead. This is enforced at Netlify's CDN edge, not in the
 # browser, so it can't be bypassed by disabling JavaScript.
-
-/member-*  /member-:splat  200!  Role=full-toolkit
-/member-*  /pricing.html   401!
+#
+# PAYWALL CURRENTLY DISABLED (temporary — growth phase):
+# All /member-* pages are open to everyone, logged in or not. To bring the
+# paywall back later, delete the pass-through line below and uncomment the
+# two Role=full-toolkit lines.
+#
+# /member-*  /member-:splat  200!  Role=full-toolkit
+# /member-*  /pricing.html   401!
+/member-*  /member-:splat  200!

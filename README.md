@@ -1,5 +1,10 @@
 # SeniorsOS site
 
+**Paywall currently disabled.** All `member-*.html` pages are open to
+everyone, logged in or not — see `_redirects`. The Stripe/Netlify Identity
+code is still in place (untouched) so charging can be switched back on later
+by editing `_redirects`; no rebuild needed.
+
 Static site (no build step for the pages themselves) plus one Netlify
 Function for handling Stripe payments securely. Key files:
 
@@ -82,4 +87,3 @@ GitHub repository and connect that repo in Netlify instead.
   directly from `esm.sh` — no bundler needed for the pages themselves.
 - The Netlify Function is the only part of this project that needs `npm install`,
   which is why a Git-connected deploy matters (see step 5 above).
-# seniorsos
