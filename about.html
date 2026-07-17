@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — SeniorsOS</title>
+<meta name="description" content="Why SeniorsOS exists, and who it's built for.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <a class="logo" href="index.html">Seniors<span>OS</span></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="toolkit.html">Toolkit</a>
+      <a href="shop.html">Shop</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html" class="current">About</a>
+    </nav>
+      <div class="auth-controls mono">
+        <a href="#" data-auth-open="login" class="auth-out">Log in</a>
+        <a href="member-dashboard.html" class="auth-member" style="display:none;">My Toolkit</a>
+        <a href="#" data-auth-action="logout" class="auth-in" style="display:none;">Log out</a>
+      </div>
+    <button class="header-cta" onclick="location.href='toolkit.html'">Try Scam Shield free</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="page-hero">
+    <span class="eyebrow mono">About</span>
+    <h1>Why SeniorsOS exists.</h1>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="longform">
+      <p>Most AI tools were built for people who already find computers easy. That leaves out a lot of people — including plenty of sharp, capable adults who just never had a reason to learn the jargon, and shouldn't have to.</p>
+      <p>SeniorsOS started as a simple bet: if the same AI tools that help someone draft an email or decode a bill were repackaged in plain language, with no account, no app, and no ten-minute onboarding, they'd genuinely help. Scam Shield came first, because scams aimed at older Australians are common, convincing, and rarely explained clearly until it's too late.</p>
+
+      <h2>What we won't do</h2>
+      <ul>
+        <li>We won't fill the toolkit with modules nobody asked for, just to look comprehensive.</li>
+        <li>We won't add a product to the shop because it pays well — only because we'd hand it to our own family.</li>
+        <li>We won't make Scam Shield anything other than free.</li>
+      </ul>
+
+      <h2>Who it's for</h2>
+      <p>Older adults navigating daily admin on their own, and the adult children who end up as unofficial tech support. Either way, if it saves someone a confusing phone call or a bad decision, it's done its job.</p>
+
+      <h2>Get in touch</h2>
+      <p>Have a question, a product suggestion, or something that didn't work the way you expected? <a href="suggest.html" style="text-decoration:underline;">Let us know</a> — a person reads every message.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Seniors<span>OS</span></a>
+        <p>Built for the people who taught us how to use a phone in the first place.</p>
+      </div>
+      <div class="footer-links">
+        <a href="donate.html">Donate</a>
+        <a href="suggest.html">Suggest a product</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms &amp; affiliate disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script type="module" src="assets/auth.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

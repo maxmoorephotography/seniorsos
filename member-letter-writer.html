@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letter Writer — SeniorsOS</title>
+<meta name="description" content="Letter Writer: turn a rough complaint, request, or explanation into a clear, properly addressed letter, ready to send.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+<!-- MEMBERS-ONLY PAGE: access is enforced at Netlify's CDN edge by the
+     _redirects file (Role=full-toolkit), not by client-side JS. The
+     data-requires-plan attribute on <body> below is informational only. -->
+</head>
+<body data-requires-plan="full-toolkit">
+
+<header>
+  <div class="header-row">
+    <a class="logo" href="index.html">Seniors<span>OS</span></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="toolkit.html">Toolkit</a>
+      <a href="shop.html">Shop</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+    </nav>
+      <div class="auth-controls mono">
+        <a href="#" data-auth-open="login" class="auth-out">Log in</a>
+        <a href="member-dashboard.html" class="auth-member" style="display:none;">My Toolkit</a>
+        <a href="#" data-auth-action="logout" class="auth-in" style="display:none;">Log out</a>
+      </div>
+    <button class="header-cta" onclick="location.href='scam-shield.html'">Try Scam Shield free</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="page-hero" style="padding-bottom:0;">
+    <a class="product-back mono" href="member-dashboard.html">&larr; Back to My Toolkit</a>
+    <span class="tag toolkit" style="margin-bottom:14px; display:inline-block;">Full Toolkit</span>
+    <h1>Letter Writer</h1>
+    <p class="lede">Turn a rough complaint, request, or explanation into a clear, properly addressed letter — ready to send, print, or email — in your own voice, not a robotic one.</p>
+  </section>
+
+  <section style="padding-top:28px;">
+    <div class="longform">
+
+      <h2>How it works</h2>
+      <p>Getting the tone and structure right on a formal letter — to a strata manager, an insurer, a utility provider — takes longer than it should. Describe what happened and what you want to happen next, and Claude drafts a clear, properly structured letter you can send as-is or adjust.</p>
+
+      <h2>How to use it</h2>
+      <ul>
+        <li>Explain what happened, in your own words, no need to make it formal.</li>
+        <li>Say who it's going to and what outcome you're after.</li>
+        <li>Ask for a version that's firmer or friendlier if the first draft isn't quite right.</li>
+        <li>Ask Claude to keep it to one page if you want something short and to the point.</li>
+      </ul>
+
+      <h2>A few prompts to start with</h2>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Chase up a repair</p>
+        <div class="example">"Write a letter to my strata manager. The front gate has been broken for six weeks despite two phone calls, and I want it fixed within two weeks or I'll raise it at the next AGM. Keep it firm but polite."</div>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Dispute a bill or charge</p>
+        <div class="example">"Write a letter to my energy provider disputing a $220 charge on my last bill that doesn't match my usual usage. I'd like a review and an explanation before I pay it."</div>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Request an accommodation</p>
+        <div class="example">"Write a letter to my local council asking for a disabled parking permit renewal, explaining that my mobility has become more limited over the past year."</div>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Make a shorter, friendlier version</p>
+        <div class="example">"Can you rewrite that last letter to be shorter and a bit warmer in tone, while still being clear about what I need?"</div>
+      <p>Copy whichever fits, swap in your own details, and paste it into Claude to get a plain-English answer written for your exact situation.</p>
+
+      <div style="margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;">
+        <a class="btn-primary" href="https://claude.ai" target="_blank" rel="noopener">Open Claude to try it →</a>
+        <a class="btn-secondary" href="member-dashboard.html">&larr; Back to My Toolkit</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Seniors<span>OS</span></a>
+        <p>Built for the people who taught us how to use a phone in the first place.</p>
+      </div>
+      <div class="footer-links">
+        <a href="donate.html">Donate</a>
+        <a href="suggest.html">Suggest a product</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms &amp; affiliate disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script type="module" src="assets/auth.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

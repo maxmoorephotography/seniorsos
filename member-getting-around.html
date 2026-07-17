@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Getting Around — SeniorsOS</title>
+<meta name="description" content="Getting Around: plan a trip, transport booking, or appointment with plain step-by-step directions, including accessible options.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+<!-- MEMBERS-ONLY PAGE: access is enforced at Netlify's CDN edge by the
+     _redirects file (Role=full-toolkit), not by client-side JS. The
+     data-requires-plan attribute on <body> below is informational only. -->
+</head>
+<body data-requires-plan="full-toolkit">
+
+<header>
+  <div class="header-row">
+    <a class="logo" href="index.html">Seniors<span>OS</span></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="toolkit.html">Toolkit</a>
+      <a href="shop.html">Shop</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+    </nav>
+      <div class="auth-controls mono">
+        <a href="#" data-auth-open="login" class="auth-out">Log in</a>
+        <a href="member-dashboard.html" class="auth-member" style="display:none;">My Toolkit</a>
+        <a href="#" data-auth-action="logout" class="auth-in" style="display:none;">Log out</a>
+      </div>
+    <button class="header-cta" onclick="location.href='scam-shield.html'">Try Scam Shield free</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="page-hero" style="padding-bottom:0;">
+    <a class="product-back mono" href="member-dashboard.html">&larr; Back to My Toolkit</a>
+    <span class="tag toolkit" style="margin-bottom:14px; display:inline-block;">Full Toolkit</span>
+    <h1>Getting Around</h1>
+    <p class="lede">Plan a trip, a transport booking, or an appointment with step-by-step directions written in plain language — including accessible options where they matter.</p>
+  </section>
+
+  <section style="padding-top:28px;">
+    <div class="longform">
+
+      <h2>How it works</h2>
+      <p>Booking transport or planning a trip often assumes familiarity with apps and systems that aren't intuitive on a first try. Describe where you need to go and any mobility needs, and Claude lays out the steps in order — including wheelchair-accessible or lower-mobility options where relevant.</p>
+
+      <h2>How to use it</h2>
+      <ul>
+        <li>Say where you're starting from and where you need to get to.</li>
+        <li>Mention any mobility needs — a wheelchair, a walker, trouble with stairs.</li>
+        <li>Ask for the steps in order, including which app or number to use.</li>
+        <li>Ask what to do if the first option falls through, so you've got a backup.</li>
+      </ul>
+
+      <h2>A few prompts to start with</h2>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Book accessible transport</p>
+        <div class="example">"I need a wheelchair-accessible taxi to St Vincent's Hospital tomorrow at 9am from home in Sydney. What's the easiest way to book one, step by step?"</div>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Plan a trip with limited mobility</p>
+        <div class="example">"I want to visit my daughter in Newcastle by train from Sydney, and I have trouble with stairs and long walks. What should I know about accessible platforms and assistance booking?"</div>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Understand a transport app</p>
+        <div class="example">"I've never used the Opal app before and want to plan a bus trip across Sydney. Can you walk me through it step by step in plain language?"</div>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Have a backup plan</p>
+        <div class="example">"If my pre-booked accessible taxi doesn't turn up on the day, what's my best backup option to still make a 9am hospital appointment?"</div>
+      <p>Copy whichever fits, swap in your own details, and paste it into Claude to get a plain-English answer written for your exact situation.</p>
+
+      <div style="margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;">
+        <a class="btn-primary" href="https://claude.ai" target="_blank" rel="noopener">Open Claude to try it →</a>
+        <a class="btn-secondary" href="member-dashboard.html">&larr; Back to My Toolkit</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Seniors<span>OS</span></a>
+        <p>Built for the people who taught us how to use a phone in the first place.</p>
+      </div>
+      <div class="footer-links">
+        <a href="donate.html">Donate</a>
+        <a href="suggest.html">Suggest a product</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms &amp; affiliate disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script type="module" src="assets/auth.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

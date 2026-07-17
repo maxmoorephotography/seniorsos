@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Toolkit — SeniorsOS</title>
+<meta name="description" content="Your Full Toolkit dashboard — all six SeniorsOS modules and your Notion dashboard, in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+<!-- MEMBERS-ONLY PAGE: access is enforced at Netlify's CDN edge by the
+     _redirects file (Role=full-toolkit), not by client-side JS. The
+     data-requires-plan attribute on <body> below is informational only. -->
+</head>
+<body data-requires-plan="full-toolkit">
+
+<header>
+  <div class="header-row">
+    <a class="logo" href="index.html">Seniors<span>OS</span></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="toolkit.html">Toolkit</a>
+      <a href="shop.html">Shop</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+    </nav>
+      <div class="auth-controls mono">
+        <a href="#" data-auth-open="login" class="auth-out">Log in</a>
+        <a href="member-dashboard.html" class="auth-member" style="display:none;">My Toolkit</a>
+        <a href="#" data-auth-action="logout" class="auth-in" style="display:none;">Log out</a>
+      </div>
+    <button class="header-cta" onclick="location.href='scam-shield.html'">Try Scam Shield free</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="page-hero">
+    <span class="tag toolkit" style="margin-bottom:14px; display:inline-block;">Full Toolkit</span>
+    <h1>My Toolkit</h1>
+    <p class="lede">All six modules, your printable guides, and the Notion dashboard — everything from your Full Toolkit purchase, in one place.</p>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="module-list">
+
+      <div class="module-card">
+        <div><span class="tag toolkit">Guide</span></div>
+        <div>
+          <h3>Bill Buster</h3>
+          <p>Feed in a confusing bill and get back what it actually means, what you owe, and whether anything looks off.</p>
+          <a href="member-bill-buster.html" class="readout-link">Open guide →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div><span class="tag toolkit">Guide</span></div>
+        <div>
+          <h3>Tradie Finder</h3>
+          <p>A plain checklist for finding, vetting, and pricing a tradesperson without getting overcharged.</p>
+          <a href="member-tradie-finder.html" class="readout-link">Open guide →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div><span class="tag toolkit">Guide</span></div>
+        <div>
+          <h3>Letter Writer</h3>
+          <p>Turn a rough complaint or request into a clear, properly addressed letter, ready to send.</p>
+          <a href="member-letter-writer.html" class="readout-link">Open guide →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div><span class="tag toolkit">Guide</span></div>
+        <div>
+          <h3>Getting Around</h3>
+          <p>Plan a trip or transport booking with plain, step-by-step directions — including accessible options.</p>
+          <a href="member-getting-around.html" class="readout-link">Open guide →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div><span class="tag toolkit">Guide</span></div>
+        <div>
+          <h3>Car Basics</h3>
+          <p>A straight answer on a dashboard light, a noise, or a service quote — before you call anyone.</p>
+          <a href="member-car-basics.html" class="readout-link">Open guide →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div><span class="tag free">Free</span></div>
+        <div>
+          <h3>Scam Shield</h3>
+          <p>Paste in a suspicious text, email, or call script and get a plain answer on whether it's safe.</p>
+          <a href="scam-shield.html" class="readout-link">Open guide →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap" style="padding: 44px 0; text-align:center;">
+      <h2 style="font-size: clamp(1.4rem, 3vw, 1.9rem);">Your Notion dashboard</h2>
+      <p style="color: var(--ink-soft); margin: 14px 0 26px;">A single home for all six modules, plus printable versions of every guide, that you can duplicate into your own Notion account.</p>
+      <!-- Replace this href with your real Notion template share link -->
+      <a class="btn-primary" href="https://notion.so/YOUR-DASHBOARD-TEMPLATE-LINK" target="_blank" rel="noopener">Open the Notion dashboard →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Seniors<span>OS</span></a>
+        <p>Built for the people who taught us how to use a phone in the first place.</p>
+      </div>
+      <div class="footer-links">
+        <a href="donate.html">Donate</a>
+        <a href="suggest.html">Suggest a product</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms &amp; affiliate disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script type="module" src="assets/auth.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

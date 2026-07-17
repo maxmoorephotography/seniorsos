@@ -1,0 +1,11 @@
+# Role-based access control for the Full Toolkit member pages.
+# Requires Netlify Identity to be enabled, and the "full-toolkit" role to be
+# granted via netlify/functions/stripe-webhook.js after a successful payment.
+#
+# Anyone whose Netlify Identity JWT includes the "full-toolkit" role is served
+# the page as normal. Everyone else (including logged-out visitors) is sent to
+# pricing.html instead. This is enforced at Netlify's CDN edge, not in the
+# browser, so it can't be bypassed by disabling JavaScript.
+
+/member-*  /member-:splat  200!  Role=full-toolkit
+/member-*  /pricing.html   401!

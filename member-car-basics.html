@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Basics — SeniorsOS</title>
+<meta name="description" content="Car Basics: ask about a dashboard light, a strange noise, or a service quote and get a plain, honest answer about what it means.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+<!-- MEMBERS-ONLY PAGE: access is enforced at Netlify's CDN edge by the
+     _redirects file (Role=full-toolkit), not by client-side JS. The
+     data-requires-plan attribute on <body> below is informational only. -->
+</head>
+<body data-requires-plan="full-toolkit">
+
+<header>
+  <div class="header-row">
+    <a class="logo" href="index.html">Seniors<span>OS</span></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="toolkit.html">Toolkit</a>
+      <a href="shop.html">Shop</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+    </nav>
+      <div class="auth-controls mono">
+        <a href="#" data-auth-open="login" class="auth-out">Log in</a>
+        <a href="member-dashboard.html" class="auth-member" style="display:none;">My Toolkit</a>
+        <a href="#" data-auth-action="logout" class="auth-in" style="display:none;">Log out</a>
+      </div>
+    <button class="header-cta" onclick="location.href='scam-shield.html'">Try Scam Shield free</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="page-hero" style="padding-bottom:0;">
+    <a class="product-back mono" href="member-dashboard.html">&larr; Back to My Toolkit</a>
+    <span class="tag toolkit" style="margin-bottom:14px; display:inline-block;">Full Toolkit</span>
+    <h1>Car Basics</h1>
+    <p class="lede">Ask about a dashboard light, a strange noise, or a service quote and get a straight answer about what it means and whether it's urgent — before you call anyone.</p>
+  </section>
+
+  <section style="padding-top:28px;">
+    <div class="longform">
+
+      <h2>How it works</h2>
+      <p>Warning lights and mechanic quotes can be genuinely alarming without context. Describe the light, the noise, or the quote, and Claude gives you a plain-English read on what it likely means, how urgent it is, and what a fair service cost looks like — so you're better prepared before speaking to a mechanic.</p>
+
+      <h2>How to use it</h2>
+      <ul>
+        <li>Describe the light, sound, or symptom — colour, when it happens, how long it's been going on.</li>
+        <li>Ask whether it's safe to keep driving or whether it needs attention right away.</li>
+        <li>Paste in a service quote and ask if the line items and cost look reasonable.</li>
+        <li>Ask what questions to ask the mechanic before agreeing to any work.</li>
+      </ul>
+
+      <h2>A few prompts to start with</h2>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Understand a warning light</p>
+        <div class="example">"An orange engine-shaped light came on this morning and the car feels the same to drive. Is it safe to keep driving to work, or should I get it looked at today?"</div>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Check a strange noise</p>
+        <div class="example">"My car makes a grinding noise when I brake, especially at low speed. How urgent is this, and roughly what would a mechanic likely need to fix?"</div>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Sanity-check a service quote</p>
+        <div class="example">"A mechanic quoted me $780 for a routine service, brake pads, and an oil change on a 2016 sedan. Does that sound reasonable, and what should I ask them to clarify?"</div>
+        <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">Prepare questions for the mechanic</p>
+        <div class="example">"My car is due for its yearly service. What are five good questions to ask the mechanic so I understand what I'm actually paying for?"</div>
+      <p>Copy whichever fits, swap in your own details, and paste it into Claude to get a plain-English answer written for your exact situation.</p>
+
+      <div style="margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;">
+        <a class="btn-primary" href="https://claude.ai" target="_blank" rel="noopener">Open Claude to try it →</a>
+        <a class="btn-secondary" href="member-dashboard.html">&larr; Back to My Toolkit</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Seniors<span>OS</span></a>
+        <p>Built for the people who taught us how to use a phone in the first place.</p>
+      </div>
+      <div class="footer-links">
+        <a href="donate.html">Donate</a>
+        <a href="suggest.html">Suggest a product</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms &amp; affiliate disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script type="module" src="assets/auth.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

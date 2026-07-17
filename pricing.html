@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — SeniorsOS</title>
+<meta name="description" content="Try Scam Shield free, forever. Unlock the Full Toolkit for a one-time fee, or get it set up for you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <a class="logo" href="index.html">Seniors<span>OS</span></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="toolkit.html">Toolkit</a>
+      <a href="shop.html">Shop</a>
+      <a href="pricing.html" class="current">Pricing</a>
+      <a href="about.html">About</a>
+    </nav>
+      <div class="auth-controls mono">
+        <a href="#" data-auth-open="login" class="auth-out">Log in</a>
+        <a href="member-dashboard.html" class="auth-member" style="display:none;">My Toolkit</a>
+        <a href="#" data-auth-action="logout" class="auth-in" style="display:none;">Log out</a>
+      </div>
+    <button class="header-cta" onclick="location.href='toolkit.html'">Try Scam Shield free</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="page-hero">
+    <span class="eyebrow mono">Pricing</span>
+    <h1>Try it free. Pay only if it's genuinely useful.</h1>
+    <p class="lede">No subscriptions you forget about, no surprise renewals. One free module, one straightforward upgrade, and a helping hand if you'd rather not do the setup yourself.</p>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="pricing-grid">
+      <div class="price-card">
+        <span class="mono">Free, always</span>
+        <h3>Scam Shield</h3>
+        <div class="amount">$0</div>
+        <ul>
+          <li>Unlimited use, no time limit</li>
+          <li>No card or account required</li>
+          <li>Same plain-English answers as the full toolkit</li>
+        </ul>
+        <a class="btn-secondary" href="toolkit.html#scam-shield">Start free</a>
+      </div>
+
+      <div class="price-card highlight">
+        <span class="mono">One-time payment</span>
+        <h3>Full Toolkit</h3>
+        <div class="amount">$5.99</div>
+        <ul>
+          <li>All six modules: Bill Buster, Tradie Finder, Letter Writer, Getting Around, Car Basics, Scam Shield</li>
+          <li>Printable versions of every guide</li>
+          <li>The SeniorsOS Notion dashboard</li>
+          <li>Pay once — no recurring charge</li>
+        </ul>
+        <!-- The Stripe Payment Link lives in assets/auth.js (STRIPE_PAYMENT_LINK constant) —
+             edit it there once and every checkout button on the site uses it. -->
+        <a class="btn-primary" href="#" data-auth-checkout="1">Get the Full Toolkit</a>
+      </div>
+
+      <div class="price-card">
+        <span class="mono">Done for you</span>
+        <h3>Guided Setup</h3>
+        <div class="amount">POA</div>
+        <ul>
+          <li>We set up the Full Toolkit and dashboard for a parent or family member</li>
+          <li>One short call to walk through how it works</li>
+          <li>Best for family members who'd rather not DIY it</li>
+        </ul>
+        <a class="btn-secondary" href="suggest.html">Ask about setup</a>
+      </div>
+    </div>
+
+    <div style="margin: 44px 0; padding: 36px 30px; text-align:center; background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius);">
+      <span class="eyebrow mono">Pay what you like</span>
+      <h2 style="font-size: clamp(1.3rem, 2.6vw, 1.7rem); margin: 10px 0 12px;">Want to help keep it going?</h2>
+      <p style="color: var(--ink-soft); margin: 0 auto 20px; max-width:56ch;">The Full Toolkit is priced to be affordable for pensioners, which means it barely covers running costs. If SeniorsOS has helped you or your family, a donation goes straight toward building the next module.</p>
+      <a class="btn-secondary" href="donate.html">Support SeniorsOS →</a>
+    </div>
+
+    <div class="faq">
+      <details class="faq-item" open>
+        <summary>Is Scam Shield really free forever?</summary>
+        <p>Yes. It doesn't expire, and it doesn't need a card on file. It's the module most people need most urgently, so it stays free.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is the Full Toolkit a subscription?</summary>
+        <p>No — it's a one-time payment. You pay once and keep access, including any future updates to the six modules.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can a family member use it on my behalf?</summary>
+        <p>Yes. Many people set it up for a parent, or use it together. There's no per-person limit.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need to know anything about AI to use it?</summary>
+        <p>No. Each module already knows what to ask you — you just answer in plain language, the way you'd explain the problem to a person.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if it doesn't help with my situation?</summary>
+        <p>Get in touch through the suggestion page and tell us what happened — we'd genuinely like to know so we can improve the module.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Seniors<span>OS</span></a>
+        <p>Built for the people who taught us how to use a phone in the first place.</p>
+      </div>
+      <div class="footer-links">
+        <a href="donate.html">Donate</a>
+        <a href="suggest.html">Suggest a product</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms &amp; affiliate disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script type="module" src="assets/auth.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "seniorsos-site",
+  "private": true,
+  "description": "SeniorsOS static site with a Netlify Function for Stripe + Identity integration.",
+  "dependencies": {
+    "stripe": "*",
+    "@netlify/identity": "*"
+  }
+}

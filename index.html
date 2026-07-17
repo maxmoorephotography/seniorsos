@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SeniorsOS — Plain help, hand-picked products</title>
+<meta name="description" content="SeniorsOS turns confusing AI tools into plain, step-by-step help for bills, letters, scams and getting around \u2014 plus a short list of products worth having.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <a class="logo" href="index.html">Seniors<span>OS</span></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="toolkit.html">Toolkit</a>
+      <a href="shop.html">Shop</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+    </nav>
+      <div class="auth-controls mono">
+        <a href="#" data-auth-open="login" class="auth-out">Log in</a>
+        <a href="member-dashboard.html" class="auth-member" style="display:none;">My Toolkit</a>
+        <a href="#" data-auth-action="logout" class="auth-in" style="display:none;">Log out</a>
+      </div>
+    <button class="header-cta" onclick="location.href='scam-shield.html'">Try Scam Shield free</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <h1>Getting older shouldn't mean falling behind.</h1>
+    <p class="lede">SeniorsOS turns confusing AI tools into plain, step-by-step help for the things that actually come up — bills, letters, scams, getting around. And when a product would genuinely make life easier, we say so.</p>
+    <div class="hero-ctas">
+      <a class="btn-primary" href="toolkit.html">Try a module free</a>
+      <a class="btn-secondary" href="shop.html">See recommended products</a>
+    </div>
+    <div class="hero-note">No jargon, no app store, no account needed to try the first module.</div>
+  </section>
+
+  <section id="dial-section">
+    <div class="section-head">
+      <span class="eyebrow mono">The toolkit</span>
+      <h2>Turn the dial to see what's inside.</h2>
+      <p>Six plain-English helpers. Pick one to see what it actually does — no tech talk.</p>
+    </div>
+
+    <div class="dial-section">
+      <div class="dial-outer" id="dial" data-default="5">
+        <div class="pointer" id="pointer"></div>
+        <div class="dial-center"></div>
+      </div>
+
+      <div class="dial-readout">
+        <span class="tag free" id="readout-tag">Free</span>
+        <h3 id="readout-title">Scam Shield</h3>
+        <p id="readout-desc">Paste in a suspicious text, email, or call script and get a plain answer: is this safe, and what to do next.</p>
+        <a class="readout-link" id="readout-link" href="toolkit.html#scam-shield">Read more →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap" style="padding: 20px 0;">
+      <div class="section-head">
+        <span class="eyebrow mono">Getting started</span>
+        <h2>Try one module free. Unlock the rest when you're ready.</h2>
+      </div>
+
+      <div class="pricing-grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="price-card">
+          <span class="mono">Free, always</span>
+          <h3>Scam Shield</h3>
+          <div class="amount">$0</div>
+          <ul>
+            <li>Unlimited use, no time limit</li>
+            <li>No card or account required</li>
+          </ul>
+          <a class="btn-secondary" href="toolkit.html">Start free</a>
+        </div>
+
+        <div class="price-card highlight">
+          <span class="mono">One-time payment</span>
+          <h3>Full Toolkit</h3>
+          <div class="amount">$5.99</div>
+          <ul>
+            <li>All six modules, printable guides and the Notion dashboard</li>
+          </ul>
+          <a class="btn-primary" href="pricing.html">See full pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="eyebrow mono">Recommended products</span>
+      <h2>Things we'd recommend to our own parents.</h2>
+      <p>A short, hand-picked list — not a catalogue. A couple of favourites below, or browse everything.</p>
+    </div>
+
+    <div class="note-grid">
+      <div class="note-card">
+        <span class="note-icon">🧼</span>
+        <h4>Persimmon soap bar</h4>
+        <p>Gentle on thin, dry skin — no harsh fragrance or foaming agents to sting.</p>
+        <a href="shop.html">See it →</a>
+      </div>
+      <div class="note-card">
+        <span class="note-icon">🫧</span>
+        <h4>Bamboo shower sponge</h4>
+        <p>Soft enough for sensitive skin, and easy to keep hold of when wet.</p>
+        <a href="shop.html">See it →</a>
+      </div>
+      <div class="note-card">
+        <span class="note-icon">🚿</span>
+        <h4>Suction grab bar</h4>
+        <p>No drilling — moves with you if you rearrange, holds steady when it matters.</p>
+        <a href="shop.html">See it →</a>
+      </div>
+    </div>
+    <div style="margin-top:30px;">
+      <a class="btn-secondary" href="shop.html">Browse the full shop →</a>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap" style="padding: 44px 0; text-align:center;">
+      <h2 style="font-size: clamp(1.4rem, 3vw, 1.9rem);">Know a product that belongs on this list?</h2>
+      <p style="color: var(--ink-soft); margin: 14px 0 26px;">Tell us about it — we read every suggestion.</p>
+      <a class="btn-primary" href="suggest.html">Suggest a product</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Seniors<span>OS</span></a>
+        <p>Built for the people who taught us how to use a phone in the first place. No account required to try the first module, no pressure to buy anything.</p>
+      </div>
+      <div class="footer-links">
+        <a href="donate.html">Donate</a>
+        <a href="suggest.html">Suggest a product</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms &amp; affiliate disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script type="module" src="assets/auth.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

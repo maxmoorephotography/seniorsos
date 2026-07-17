@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scam Shield — SeniorsOS</title>
+<meta name="description" content="Scam Shield: paste in a suspicious text, email, or call script and get a plain answer on whether it's safe. Free, no account needed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <a class="logo" href="index.html">Seniors<span>OS</span></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="toolkit.html" class="current">Toolkit</a>
+      <a href="shop.html">Shop</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+    </nav>
+      <div class="auth-controls mono">
+        <a href="#" data-auth-open="login" class="auth-out">Log in</a>
+        <a href="member-dashboard.html" class="auth-member" style="display:none;">My Toolkit</a>
+        <a href="#" data-auth-action="logout" class="auth-in" style="display:none;">Log out</a>
+      </div>
+    <button class="header-cta" onclick="location.href='https://claude.ai'">Try Scam Shield free</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="page-hero" style="padding-bottom:0;">
+    <a class="product-back mono" href="toolkit.html">&larr; Back to the toolkit</a>
+    <span class="tag free" style="margin-bottom:14px; display:inline-block;">Free, always</span>
+    <h1>Scam Shield</h1>
+    <p class="lede">Paste in a suspicious text, email, or call script and get a plain answer: is this safe, and what should you do next. No account, no card, no time limit.</p>
+  </section>
+
+  <section style="padding-top:28px;">
+    <div class="longform">
+
+      <h2>How it works</h2>
+      <p>Scam Shield isn't a filter that silently blocks messages — it's a plain-English second opinion you ask for yourself, whenever something feels off. You paste in the exact wording of a text, email, or a script from a phone call, and it reads the message the way a sharp, scam-aware relative would: checking the details that scammers rely on people not noticing.</p>
+      <p>It looks for the patterns that show up again and again in scams — a fake sense of urgency, a request for payment or personal details through an unusual channel, a link or number that doesn't match the real organisation, or a story that shifts when you ask it a second question. Then it gives you a straight answer, in plain language, along with the reasoning behind it — not just "safe" or "unsafe" with nothing to back it up.</p>
+
+      <h2>How to use it</h2>
+      <ul>
+        <li><strong>Copy the message.</strong> Select the exact text of the email, text message, or a summary of what was said on a call.</li>
+        <li><strong>Paste it in and ask.</strong> Something as simple as "Is this a scam?" alongside the pasted message is enough.</li>
+        <li><strong>Read the answer.</strong> You'll get a plain verdict plus the specific reasons behind it, so you can recognise the same warning signs yourself next time.</li>
+        <li><strong>Ask a follow-up if you're unsure.</strong> You can ask things like "What should I do now?" or "Should I call the bank directly?" and get a direct next step.</li>
+      </ul>
+
+      <h2>A few prompts to start with</h2>
+      <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">A suspicious delivery text</p>
+      <div class="example">"I got a text saying my parcel couldn't be delivered and asking me to pay a $2 redelivery fee through a link — is this real?"</div>
+      <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">A phone call claiming to be your bank</p>
+      <div class="example">"Someone rang saying they were from my bank's fraud department and asked me to confirm my card number to 'stop a suspicious transaction' — is this how banks actually contact people?"</div>
+      <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">An email about a prize or refund</p>
+      <div class="example">"I got an email saying I'm owed a $340 tax refund and just need to click a link and enter my bank details to receive it — is this legitimate?"</div>
+      <p class="mono" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin: 22px 0 6px;">A grandchild or relative asking for urgent help</p>
+      <div class="example">"I got a text from an unknown number saying it's my grandson, he's in trouble and needs me to transfer money urgently and not tell anyone — what should I do?"</div>
+      <p>Copy whichever fits, swap in your own details, and paste it into Claude to get a plain-English answer written for your exact situation.</p>
+
+      <h2>A worked example</h2>
+      <div class="example">"I got a text saying my parcel couldn't be delivered and asking me to pay a $2 redelivery fee through a link — is this real?"</div>
+      <p>Scam Shield would flag the small "redelivery fee" as a classic tactic — a tiny amount designed to feel harmless while it captures your card details — and explain that it's safer to check the delivery directly through the courier's official app or website rather than the link in the message.</p>
+
+      <h2>Try it now</h2>
+      <p>Scam Shield runs on Claude, Anthropic's AI assistant. Open <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>, paste in the suspicious message, and ask whether it looks like a scam — it's free to use and no SeniorsOS account is required.</p>
+
+      <div style="margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;">
+        <a class="btn-primary" href="https://claude.ai" target="_blank" rel="noopener">Try Scam Shield on Claude →</a>
+        <a class="btn-secondary" href="toolkit.html">&larr; Back to the toolkit</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Seniors<span>OS</span></a>
+        <p>Built for the people who taught us how to use a phone in the first place.</p>
+      </div>
+      <div class="footer-links">
+        <a href="donate.html">Donate</a>
+        <a href="suggest.html">Suggest a product</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms &amp; affiliate disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script type="module" src="assets/auth.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
