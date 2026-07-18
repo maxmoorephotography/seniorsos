@@ -75,6 +75,8 @@ GitHub repository and connect that repo in Netlify instead.
 ## Before going live (checklist)
 
 - [ ] Replace every `#` placeholder link in `shop.html` with real affiliate URLs
+- [ ] Replace the two `#` placeholder links in `member-trusted-agents.html` with real
+      contact/website links for Dual Realty and The Kaprilian Edit
 - [ ] Replace bracketed placeholders in `privacy.html` and `terms.html`, and have them reviewed
 - [ ] Complete the Stripe + Identity setup above and test a real $5.99 purchase end to end
 - [ ] Connect a Git repo to Netlify if you haven't already (required for the webhook function)

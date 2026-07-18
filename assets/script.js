@@ -15,24 +15,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- the dial (module selector) ---------- */
   const modules = [
-    { name: "Bill Buster", tag: "toolkit", label: "Toolkit", title: "Bill Buster",
+    { name: "Bill Buster", tag: "free", label: "Free", title: "Bill Buster",
       desc: "Feed in a confusing bill and get back what it actually means, what you owe, and whether anything looks off.",
       example: "\u201cWhy did my electricity bill jump $40 this month?\u201d" },
-    { name: "Tradie Finder", tag: "toolkit", label: "Toolkit", title: "Tradie Finder",
+    { name: "Tradie Finder", tag: "free", label: "Free", title: "Tradie Finder",
       desc: "Describe the job that needs doing and get a plain checklist for finding, vetting, and pricing a tradesperson.",
       example: "\u201cMy hot water system is leaking \u2014 who do I call and what should it cost?\u201d" },
-    { name: "Letter Writer", tag: "toolkit", label: "Toolkit", title: "Letter Writer",
+    { name: "Letter Writer", tag: "free", label: "Free", title: "Letter Writer",
       desc: "Turn a rough complaint or request into a clear, properly addressed letter \u2014 ready to send or print.",
       example: "\u201cWrite a letter asking my strata to fix the broken gate.\u201d" },
-    { name: "Getting Around", tag: "toolkit", label: "Toolkit", title: "Getting Around",
+    { name: "Getting Around", tag: "free", label: "Free", title: "Getting Around",
       desc: "Plan a trip, a transport booking, or an appointment with step-by-step directions in plain language.",
       example: "\u201cHow do I book a wheelchair-accessible taxi to the hospital?\u201d" },
-    { name: "Car Basics", tag: "toolkit", label: "Toolkit", title: "Car Basics",
+    { name: "Car Basics", tag: "free", label: "Free", title: "Car Basics",
       desc: "Ask about a dashboard light, a strange noise, or a service quote and get a straight answer.",
       example: "\u201cWhat does the orange engine light actually mean?\u201d" },
     { name: "Scam Shield", tag: "free", label: "Free", title: "Scam Shield",
       desc: "Paste in a suspicious text, email, or call script and get a plain answer: is this safe, and what to do next.",
       example: "\u201cI got a text saying my parcel couldn't be delivered \u2014 is this real?\u201d" },
+    { name: "Trusted Real Estate Agents", tag: "free", label: "Free", title: "Trusted Real Estate Agents",
+      desc: "A short, hand-vetted list of agents we trust for integrity, care and professionalism when it's time to sell.",
+      example: "\u201cWho can I trust to sell mum's house in Sydney without pressuring her?\u201d" },
   ];
 
   const dial = document.getElementById('dial');
