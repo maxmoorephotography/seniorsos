@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trusted Real Estate Agents — SeniorsOS</title>
+<meta name="description" content="Trusted Real Estate Agents: a short, hand-vetted list of agents we trust for integrity, care and professionalism when it's time to sell.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+<!-- MEMBERS-ONLY PAGE: access is enforced at Netlify's CDN edge by the
+     _redirects file (Role=full-toolkit), not by client-side JS. The
+     data-requires-plan attribute on <body> below is informational only. -->
+</head>
+<body data-requires-plan="full-toolkit">
+
+<header>
+  <div class="header-row">
+    <a class="logo" href="index.html">Seniors<span>OS</span></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="toolkit.html">Toolkit</a>
+      <a href="shop.html">Shop</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+    </nav>
+      <div class="auth-controls mono">
+        <a href="donate.html" class="auth-out">Become a supporter</a>
+        <a href="member-dashboard.html" class="auth-member" style="display:none;">My Toolkit</a>
+        <a href="#" data-auth-action="logout" class="auth-in" style="display:none;">Log out</a>
+      </div>
+    <button class="header-cta" onclick="location.href='scam-shield.html'">Useful Scam Shield</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="page-hero" style="padding-bottom:0;">
+    <a class="product-back mono" href="member-dashboard.html">&larr; Back to My Toolkit</a>
+    <span class="tag toolkit" style="margin-bottom:14px; display:inline-block;">Full Toolkit</span>
+    <h1>Trusted Real Estate Agents</h1>
+    <p class="lede">A short, hand-vetted list of agents we trust — not a directory of everyone who'll take the listing.</p>
+  </section>
+
+  <section style="padding-top:28px;">
+    <div class="longform">
+
+      <h2>Why the right agent matters here</h2>
+      <p>Selling a home later in life is rarely just a transaction. Often it means letting go of the family home to move into an aged care facility, or selling on behalf of a parent so the proceeds can be shared fairly among family. Both are emotional, and both come with pressure to move quickly, sign things under stress, or trust whoever knocked on the door first.</p>
+      <p>A good agent understands that. They explain the process in plain language, don't rush a decision that deserves time, and treat everyone involved — the seller, and the family helping them — with patience and respect. A pushy agent chasing the fastest sale is the last thing anyone needs during a transition like this.</p>
+
+      <h2>How we choose who's listed here</h2>
+      <p>Agents on this list aren't here because they're the biggest name or pay the best referral. They're here because of three things: integrity in how they deal with people, genuine social and interpersonal care for an older client or a family under strain, and professionalism in how the sale is actually run. We're starting small and deliberately — two agencies we're confident meet that bar — and will only add more, in other states, once we're just as confident about them.</p>
+
+      <h2>Agents we currently recommend</h2>
+      <div class="note-grid">
+        <div class="note-card">
+          <span class="note-icon">🏡</span>
+          <h4>Dual Realty</h4>
+          <p>Stephen Cachia — servicing Sydney and the surrounding area.<br>
+          Phone: <a href="tel:+61410339988" style="border-bottom:none;">0410 339 988</a></p>
+          <a href="https://dualrealty.com.au" target="_blank" rel="noopener">Visit website →</a>
+        </div>
+        <div class="note-card">
+          <span class="note-icon">🏡</span>
+          <h4>The Kaprilian Edit</h4>
+          <p>Andrew Kaprilian — servicing Newcastle, Lake Macquarie and the surrounding area.<br>
+          Phone: <a href="tel:+61431427993" style="border-bottom:none;">0431 427 993</a><br>
+          Email: <a href="mailto:andrewk@kaprilianedit.com.au" style="border-bottom:none;">andrewk@kaprilianedit.com.au</a></p>
+          <a href="https://kaprilianedit.com.au" target="_blank" rel="noopener">Visit website →</a>
+        </div>
+      </div>
+      <p style="margin-top:22px;">Outside these areas? We're working on it — agents in other states will be added here as we find ones that meet the same standard.</p>
+
+      <div style="margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;">
+        <a class="btn-secondary" href="member-dashboard.html">&larr; Back to My Toolkit</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Seniors<span>OS</span></a>
+        <p>Built for the people who taught us how to use a phone in the first place.</p>
+      </div>
+      <div class="footer-links">
+        <a href="donate.html">Donate</a>
+        <a href="suggest.html">Suggest a product</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms &amp; affiliate disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script type="module" src="assets/auth.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

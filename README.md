@@ -11,7 +11,8 @@ Function for handling Stripe payments securely. Key files:
 - `index.html`, `toolkit.html`, `shop.html`, `pricing.html`, `about.html`,
   `donate.html`, `scam-shield.html` — public pages, no login required
 - `member-dashboard.html`, `member-bill-buster.html`, `member-tradie-finder.html`,
-  `member-letter-writer.html`, `member-getting-around.html`, `member-car-basics.html`
+  `member-letter-writer.html`, `member-getting-around.html`, `member-car-basics.html`,
+  `member-trusted-agents.html`
   — Full Toolkit members-only pages, gated by `_redirects`
 - `thank-you.html` — the page Stripe sends people back to right after payment
 - `assets/auth.js` — login/signup/logout UI, backed by Netlify Identity
