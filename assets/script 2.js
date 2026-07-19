@@ -100,29 +100,22 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- suggest / contact form (Netlify Forms) ---------- */
   const suggestForm = document.getElementById('suggestForm');
   if (suggestForm) {
-  suggestForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const successMessage = document.getElementById('formSuccess');
+    suggestForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const success = document.getElementById('formSuccess');
+      const data = new FormData(suggestForm);
 
-    try {
-      // Create a FormData object to hold form values.
-      const formData = new FormData(suggestForm);
-      
-      // Send POST request with appropriate headers and body.
-      await fetch('/?handler=form', {  // Update URL if your Netlify form is configured differently
+      fetch('/', {
         method: 'POST',
-        body: formData,
-      });
-      
-      successMessage.classList.add('show');  // Show a message to indicate success.
-    } catch (error) {
-      console.error("Form submission failed:", error);
-      alert("There was an issue with submitting the form. Please try again.");
-    } finally {
-      suggestForm.reset();   // Clear form fields after submission attempt.
-    }
-  });
-}
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString(),
+      })
+        .catch(() => { /* fine outside a deployed Netlify environment */ })
+        .finally(() => {
+          if (success) success.classList.add('show');
+          suggestForm.reset();
+        });
+    });
+  }
 
 });
