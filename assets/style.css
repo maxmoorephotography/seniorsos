@@ -443,14 +443,6 @@ section{ padding: 60px 0; }
 .benefit-list li{ display:flex; gap:10px; color: var(--ink-soft); }
 .benefit-list li::before{ content:"✓"; color: var(--moss); font-weight:600; flex-shrink:0; }
 .longform{ max-width: 68ch; }
-.where-to-buy{ margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 16px; }
-.where-to-buy a{ color: var(--moss-deep); }
-.sold-out-badge{
-  display:inline-block; margin-top: 28px; padding: 8px 16px;
-  background: #F4E1DA; color: #8A3A22; border: 1px solid #D8A28C;
-  border-radius: 999px; font-family:'Bricolage Grotesque', sans-serif;
-  font-weight:700; letter-spacing: 0.02em; text-transform: uppercase; font-size: 14px;
-}
 .longform h2{ margin-top: 40px; margin-bottom: 12px; font-size: 1.3rem; }
 .longform h2:first-child{ margin-top: 0; }
 .longform p{ color: var(--ink-soft); margin: 0 0 16px; }
