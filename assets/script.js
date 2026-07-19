@@ -33,9 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: "Scam Shield", tag: "free", label: "Free", title: "Scam Shield",
       desc: "Paste in a suspicious text, email, or call script and get a plain answer: is this safe, and what to do next.",
       example: "\u201cI got a text saying my parcel couldn't be delivered \u2014 is this real?\u201d" },
-    { name: "Trusted Real Estate Agents", tag: "free", label: "Free", title: "Trusted Real Estate Agents",
-      desc: "A short, hand-vetted list of agents we trust for integrity, care and professionalism when it's time to sell.",
-      example: "\u201cWho can I trust to sell mum's house in Sydney without pressuring her?\u201d" },
   ];
 
   const dial = document.getElementById('dial');
