@@ -22,11 +22,11 @@
       <a href="about.html">About</a>
     </nav>
       <div class="auth-controls mono">
-        <a href="#" data-auth-open="signup" class="auth-out">Become a supporter</a>
+        <a href="donate.html" class="auth-out">Become a supporter</a>
         <a href="member-dashboard.html" class="auth-member" style="display:none;">My Toolkit</a>
         <a href="#" data-auth-action="logout" class="auth-in" style="display:none;">Log out</a>
       </div>
-    <button class="header-cta" onclick="location.href='scam-shield.html'">Try Scam Shield free</button>
+    <button class="header-cta" onclick="location.href='scam-shield.html'">Useful Scam Shield</button>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
   </div>
 </header>
@@ -48,7 +48,7 @@
         <ul>
           <li>A small thank-you toward hosting and tools</li>
         </ul>
-        <button class="btn-secondary donate-select" type="button" data-amount="5">Donate $5</button>
+        <button type="button" class="btn-secondary" data-pledge-amount="$5">Pledge $5</button>
       </div>
 
       <div class="price-card highlight">
@@ -58,7 +58,7 @@
         <ul>
           <li>Goes toward building or improving one toolkit guide</li>
         </ul>
-        <button class="btn-primary donate-select" type="button" data-amount="20">Donate $20</button>
+        <button type="button" class="btn-primary" data-pledge-amount="$20">Pledge $20</button>
       </div>
 
       <div class="price-card">
@@ -68,35 +68,46 @@
         <ul>
           <li>Give whatever feels right</li>
         </ul>
-        <button class="btn-secondary donate-select" type="button">Choose amount</button>
+        <button type="button" class="btn-secondary" data-pledge-amount="">Choose amount</button>
       </div>
-    </div>
-
-    <div class="longform" id="donation-form" style="margin-top:16px;">
-      <h2>Send a donation message</h2>
-      <p>Choose an amount above, then send your donation enquiry. We will receive your message and can provide the appropriate payment details.</p>
-      <form id="donationForm" style="max-width:680px;">
-        <label for="donorName">Your name</label>
-        <input id="donorName" name="name" type="text" autocomplete="name" required style="display:block;width:100%;margin:8px 0 16px;padding:12px;border:1px solid #ccc;border-radius:6px;">
-
-        <label for="donorEmail">Your email</label>
-        <input id="donorEmail" name="email" type="email" autocomplete="email" required style="display:block;width:100%;margin:8px 0 16px;padding:12px;border:1px solid #ccc;border-radius:6px;">
-
-        <label for="donationAmount">Donation amount (AUD)</label>
-        <input id="donationAmount" name="amount" type="number" min="1" step="0.01" required style="display:block;width:100%;margin:8px 0 16px;padding:12px;border:1px solid #ccc;border-radius:6px;">
-
-        <label for="donorMessage">Message (optional)</label>
-        <textarea id="donorMessage" name="message" rows="5" style="display:block;width:100%;margin:8px 0 16px;padding:12px;border:1px solid #ccc;border-radius:6px;"></textarea>
-
-        <button class="btn-primary" type="submit">Send donation message</button>
-        <p id="donationStatus" role="status" aria-live="polite" style="margin-top:12px;"></p>
-      </form>
     </div>
 
     <div class="longform" style="margin-top:16px;">
       <h2>Where it goes</h2>
       <p>Donations aren't required to use Scam Shield or the Full Toolkit — they simply help fund new modules, keep the free tools free, and cover the everyday costs of running the site. Every dollar goes back into SeniorsOS, not toward advertising.</p>
     </div>
+
+    <section style="padding-top:0;">
+      <div class="page-hero" style="text-align:left; padding-bottom:0;">
+        <span class="eyebrow mono">Let us know</span>
+        <h2 id="pledgeFormHeading">Tell us you'd like to donate</h2>
+        <p class="lede">This isn't a payment page yet — it sends us a note so we can follow up with a way to pay (bank transfer, PayID, or a payment link). We read every message.</p>
+      </div>
+      <form class="suggest-box" id="donateForm" name="donate" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="donate">
+        <p class="full" style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div>
+          <label for="donorName">Your name</label>
+          <input id="donorName" name="name" type="text" placeholder="Jane Smith" required>
+        </div>
+        <div>
+          <label for="donorEmail">Email</label>
+          <input id="donorEmail" name="email" type="email" placeholder="jane@example.com" required>
+        </div>
+        <div class="full">
+          <label for="donorAmount">Amount you'd like to give</label>
+          <input id="donorAmount" name="amount" type="text" placeholder="e.g. $5, $20, or any amount">
+        </div>
+        <div class="full">
+          <label for="donorMessage">Anything else? (optional)</label>
+          <textarea id="donorMessage" name="message" placeholder="Optional note"></textarea>
+        </div>
+        <div class="full">
+          <button type="submit" class="btn-primary">Send</button>
+          <div class="form-success" id="donateFormSuccess">Thanks — we've got your note and will follow up with a way to pay.</div>
+        </div>
+      </form>
+    </section>
   </section>
 
   <footer>
@@ -119,44 +130,5 @@
 
 <script type="module" src="assets/auth.js"></script>
 <script src="assets/script.js"></script>
-<script>
-  const amountInput = document.getElementById('donationAmount');
-  const donationForm = document.getElementById('donationForm');
-  const status = document.getElementById('donationStatus');
-
-  document.querySelectorAll('.donate-select').forEach(button => {
-    button.addEventListener('click', () => {
-      if (button.dataset.amount) amountInput.value = button.dataset.amount;
-      document.getElementById('donation-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setTimeout(() => document.getElementById('donorName').focus(), 500);
-    });
-  });
-
-  donationForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const submitButton = donationForm.querySelector('button[type="submit"]');
-    const formData = new FormData(donationForm);
-    const payload = Object.fromEntries(formData.entries());
-
-    submitButton.disabled = true;
-    status.textContent = 'Sending…';
-
-    try {
-      const response = await fetch('/.netlify/functions/send-donation-message', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.error || 'Unable to send the message.');
-      status.textContent = 'Thank you. Your donation message has been sent.';
-      donationForm.reset();
-    } catch (error) {
-      status.textContent = error.message || 'Something went wrong. Please try again.';
-    } finally {
-      submitButton.disabled = false;
-    }
-  });
-</script>
 </body>
 </html>
