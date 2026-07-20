@@ -75,7 +75,7 @@
     <div class="longform" id="donation-form" style="margin-top:16px;">
       <h2>Send a donation message</h2>
       <p>Choose an amount above, then send your donation enquiry. We will receive your message and can provide the appropriate payment details.</p>
-      <form id="donationForm" style="max-width:680px;">
+      <form name="donationForm" method="POST" data-netlify="true">
         <label for="donorName">Your name</label>
         <input id="donorName" name="name" type="text" autocomplete="name" required style="display:block;width:100%;margin:8px 0 16px;padding:12px;border:1px solid #ccc;border-radius:6px;">
 
@@ -120,43 +120,31 @@
 <script type="module" src="assets/auth.js"></script>
 <script src="assets/script.js"></script>
 <script>
-  const amountInput = document.getElementById('donationAmount');
   const donationForm = document.getElementById('donationForm');
-  const status = document.getElementById('donationStatus');
-
-  document.querySelectorAll('.donate-select').forEach(button => {
-    button.addEventListener('click', () => {
-      if (button.dataset.amount) amountInput.value = button.dataset.amount;
-      document.getElementById('donation-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setTimeout(() => document.getElementById('donorName').focus(), 500);
-    });
-  });
 
   donationForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    const submitButton = donationForm.querySelector('button[type="submit"]');
-    const formData = new FormData(donationForm);
-    const payload = Object.fromEntries(formData.entries());
 
-    submitButton.disabled = true;
-    status.textContent = 'Sending…';
-
+    const statusElement = document.getElementById('donationStatus');
+    
     try {
-      const response = await fetch('/.netlify/functions/send-donation-message', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.error || 'Unable to send the message.');
-      status.textContent = 'Thank you. Your donation message has been sent.';
-      donationForm.reset();
+        const response = await fetch('/.netlify/functions/send-donation-message', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(Object.fromEntries(new FormData(donationForm).entries()))
+        });
+        
+        if (!response.ok) throw new Error('An error occurred while processing the donation.');
+        
+        const result = await response.json();
+        statusElement.textContent = result.error ? `Error: ${result.error}` : 'Thank you. Your donation message has been sent.';
     } catch (error) {
-      status.textContent = error.message || 'Something went wrong. Please try again.';
-    } finally {
-      submitButton.disabled = false;
+        console.error(error);
+        statusElement.textContent = `Error: ${error.message || 'Something went wrong. Please try again later.'}`;
     }
   });
 </script>
 </body>
 </html>
+
+
